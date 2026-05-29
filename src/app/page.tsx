@@ -1,3 +1,5 @@
+'use client';
+
 import React, { useState, useEffect } from 'react';
 
 // Modern Icon SVG components defined locally for seamless copy-paste deployment
@@ -127,12 +129,12 @@ export default function AfricanVibeStudio() {
         {/* Cinematic Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {[
-            { title: "The Legend of Moremi", desc: "High-fidelity modern visual sets bringing timeless historical empires to global screens.", type: "folklore", glow: "hover:border-emerald-500/30", url: "https://youtube.com/@africananimation-d6p?si=N09_zAtR-nj🐼🁎n" },
-            { title: "Afro-Comedy Nights", desc: "Pure relatable humor frameworks engineered for viral cross-continental digital outreach.", type: "comedy", glow: "hover:border-amber-500/30", url: "https://youtube.com/@africananimation-d6p?si=N09_zAtR-nj🐼🁎n" },
-            { title: "Tales of Anansi", desc: "Deep ancestral mythology reimagined with sleek cyberpunk structures and abstract motion layout.", type: "folklore", glow: "hover:border-purple-500/30", url: "https://youtube.com/@africananimation-d6p?si=N09_zAtR-nj🐼🁎n" },
-            { title: "Afro-Futuristic Chronicles", desc: "Sprawling megacities driven by futuristic African engineering arrays and storytelling.", type: "futuristic", glow: "hover:border-indigo-500/30", url: "https://youtube.com/@africananimation-d6p?si=N09_zAtR-nj🐼🁎n" },
-            { title: "Mythology & Legends", desc: "Unveiling ancient spirits and deep historical folklore records through pristine rendering.", type: "folklore", glow: "hover:border-blue-500/30", url: "https://youtube.com/@africananimation-d6p?si=N09_zAtR-nj🐼🁎n" },
-            { title: "Entertainment & Education", desc: "Balancing critical heritage records with ultra-captivating contemporary storytelling loops.", type: "comedy", glow: "hover:border-pink-500/30", url: "https://youtube.com/@africananimation-d6p?si=N09_zAtR-nj🐼🁎n" }
+            { title: "The Legend of Moremi", desc: "High-fidelity modern visual sets bringing timeless historical empires to global screens.", type: "folklore", glow: "hover:border-emerald-500/30", url: "https://youtube.com/@africananimation-d6p?si=N09_zAtR-njn" },
+            { title: "Afro-Comedy Nights", desc: "Pure relatable humor frameworks engineered for viral cross-continental digital outreach.", type: "comedy", glow: "hover:border-amber-500/30", url: "https://youtube.com/@africananimation-d6p?si=N09_zAtR-njn" },
+            { title: "Tales of Anansi", desc: "Deep ancestral mythology reimagined with sleek cyberpunk structures and abstract motion layout.", type: "folklore", glow: "hover:border-purple-500/30", url: "https://youtube.com/@africananimation-d6p?si=N09_zAtR-njn" },
+            { title: "Afro-Futuristic Chronicles", desc: "Sprawling megacities driven by futuristic African engineering arrays and storytelling.", type: "futuristic", glow: "hover:border-indigo-500/30", url: "https://youtube.com/@africananimation-d6p?si=N09_zAtR-njn" },
+            { title: "Mythology & Legends", desc: "Unveiling ancient spirits and deep historical folklore records through pristine rendering.", type: "folklore", glow: "hover:border-blue-500/30", url: "https://youtube.com/@africananimation-d6p?si=N09_zAtR-njn" },
+            { title: "Entertainment & Education", desc: "Balancing critical heritage records with ultra-captivating contemporary storytelling loops.", type: "comedy", glow: "hover:border-pink-500/30", url: "https://youtube.com/@africananimation-d6p?si=N09_zAtR-njn" }
           ].filter(item => activeTab === 'all' || item.type === activeTab).map((video, idx) => (
             <a href={video.url} target="_blank" rel="noreferrer" key={idx} className={`group relative rounded-2xl bg-[#0d101f]/60 border border-white/5 overflow-hidden transition-all duration-500 hover:-translate-y-1.5 ${video.glow} block shadow-[0_15px_35px_rgba(0,0,0,0.4)]`}>
               <div className="aspect-video w-full bg-slate-950 relative overflow-hidden flex items-center justify-center">
@@ -249,7 +251,24 @@ export default function AfricanVibeStudio() {
         <p className="text-[11px] font-bold uppercase tracking-widest text-slate-500 mb-6">Join The Ecosystem</p>
         <div className="flex flex-wrap justify-center items-center gap-3 sm:gap-4">
           {[
-            { name: "YouTube", url: "https://youtube.com/@africananimation-d6p?si=N09_zAtR-nj🐼🁎n", color: "hover:bg-red-500/5 hover:border-red-500/30 text-red-400" },
+            { name: "YouTube", url: "https://youtube.com/@africananimation-d6p?si=N09_zAtR-njn", color: "hover:bg-red-500/5 hover:border-red-500/30 text-red-400" },
             { name: "TikTok", url: "https://vm.tiktok.com/ZNRkSdesB/", color: "hover:bg-white/5 hover:border-white/30 text-white" },
-            { name: "Instagram", url: "https://www.instagram.com/africanvibeanimation.363762?ig🚀✨sh=ZGRkYnJqa204bXA=&utm_source=ig_contact_invite", color: "hover:bg-pink-500/5 hover:border-pink-500/30 text-pink-400" },
-            { name: "Facebook", url: "https://www.facebook.com/profile.php?id=61585854161043", color: "hover:bg-blue-600/5 hover:bo
+            { name: "Instagram", url: "https://www.instagram.com/africanvibeanimation.363762?igsh=ZGRkYnJqa204bXA=&utm_source=ig_contact_invite", color: "hover:bg-pink-500/5 hover:border-pink-500/30 text-pink-400" },
+            { name: "Facebook", url: "https://www.facebook.com/profile.php?id=61585854161043", color: "hover:bg-blue-600/5 hover:border-blue-600/30 text-blue-400" },
+          ].map((social, i) => (
+            <a
+              key={i}
+              href={social.url}
+              target="_blank"
+              rel="noreferrer"
+              className={`flex items-center gap-2 px-5 py-2.5 rounded-xl border border-white/10 text-xs font-bold uppercase tracking-widest transition-all duration-300 ${social.color}`}
+            >
+              {social.name}
+            </a>
+          ))}
+        </div>
+      </section>
+
+    </div>
+  );
+}
