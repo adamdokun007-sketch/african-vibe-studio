@@ -2,8 +2,7 @@ import React from 'react';
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-[#070913] text-white flex flex-col items-center justify-center p-6 text-center">
-      {/* Glow Effect */}
+    <div className="min-h-screen bg-[#070913] text-white flex flex-col items-center justify-center p-6 text-center font-sans">
       <div className="fixed top-0 left-1/2 -translate-x-1/2 w-64 h-64 bg-purple-600/20 blur-[100px] rounded-full"></div>
       
       <h1 className="text-5xl font-bold mb-4 relative">
@@ -27,4 +26,4 @@ export default function Home() {
       </footer>
     </div>
   );
-      }
+}
