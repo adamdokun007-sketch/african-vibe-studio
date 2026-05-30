@@ -1,0 +1,22 @@
+{
+  "name": "african-vibe-studio",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "react": "latest",
+    "react-dom": "latest",
+    "next": "14.1.0",
+    "framer-motion": "latest",
+    "lucide-react": "latest",
+    "clsx": "latest",
+    "tailwind-merge": "latest",
+    "tailwindcss": "latest",
+    "postcss": "latest",
+    "autoprefixer": "latest"
+  }
+}
